@@ -15,5 +15,6 @@ int main()
 {
      cout<<sum(1,2,3)<<endl;
      cout<<sum(9,6)<<endl;
+     cout<<sum(5)<<endl;
      cout<<sum();
 }
