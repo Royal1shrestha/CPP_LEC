@@ -8,16 +8,15 @@ class construct
     int a;
     int b;
 
-    public:
     construct()
     {
-        cout<<"Constructor is called ";
+        cout<<"Constructor is called "<<endl;
         a=10;
         b=20;
     }
     void display()
     {
-        cout<<"My name is Royal.";
+        cout<<"My name is Royal."<<endl;
     }
 };
 
@@ -25,4 +24,6 @@ int main()
 {
     construct c;
     c.display();
+    cout<<c.a<<endl;
+    cout<<c.b;
 }

@@ -3,9 +3,9 @@ using namespace std;
 
 class counter
 {
-
     public:
     int count;
+    
     counter()
     {
         count=0;
