@@ -5,24 +5,38 @@ using namespace std;
 
 class student
 {
-    public:
+    private:
     string name;
     int section;
     int age;
 
-    student(string x, int a, int b)
-    {
-        name=x;
-        section=a;
-        age=b;        
-    }
+    public:
+        student(string x, int a, int b)
+        {
+            name=x;
+            section=a;
+            age=b;        
+        }
+
+        string display_name()
+        {
+            return name;
+        }
+        int display_section()
+        {
+            return section;
+        }
+        int display_age()
+        {
+            return age;
+        }
 
 };
 
 int main()
 {
     student s1("Royal",13,19);
-    cout<<"My name is "<<s1.name<<endl;
-    cout<<"I study in class "<<s1.section<<endl;
-    cout<<"My age is "<<s1.age<<endl;
+    cout<<"My name is "<<s1.display_name()<<endl;
+    cout<<"I study in class "<<s1.display_section()<<endl;
+    cout<<"My age is "<<s1.display_age()<<endl;
 }
