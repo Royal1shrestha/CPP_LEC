@@ -2,14 +2,12 @@
 #include<iostream>
 using namespace std;
 
-class student
+struct student
 {
-    private:
     string name;
     int roll;
     string address;
 
-    public:
     student(string a,int b,string c)
     {
         name=a;

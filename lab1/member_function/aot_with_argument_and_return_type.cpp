@@ -4,20 +4,12 @@
 #include<math.h>
 using namespace std;
 
-class area
-{
-    private:
-    double a;
-    double b;
-    double c;
-
-    public:
-    double calculateArea(double x,double y,double z)
+struct area
 {
     double s;
-    a=x;
-    b=y;
-    c=z;
+
+    double calculateArea(double a,double b,double c)
+{
     s=(a+b+c)/2;
     return sqrt(s*(s-a)*(s-b)*(s-c));
 }

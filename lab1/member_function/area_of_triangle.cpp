@@ -3,13 +3,11 @@
 #include<iostream>
 using namespace std;
 
-class area
+struct area
 {
-    private:
     double length;
     double height;
 
-    public:
     void calculateArea()
     {
     cout<<"Enter the length of triangle:";
@@ -18,10 +16,9 @@ class area
     cin>>height;
     cout<<"The area of triangle is "<<(0.5*length*height);
     }
-};
+}a;
 
 int main()
 {
-    area a;
     a.calculateArea();
 }

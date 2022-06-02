@@ -4,17 +4,12 @@
 #include<math.h>
 using namespace std;
 
-class area
+struct area
 {
-    private:
-    double a;
-    double b;
-    double c;
+    double a,b,c,s;
 
-    public:
     double calculateArea(double x,double y,double z)
 {
-    double s;
     a=x;
     b=y;
     c=z;
