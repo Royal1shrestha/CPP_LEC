@@ -11,17 +11,24 @@ class student
     int roll;
     string address;
     float percentage;
-    }s;
+    }s1;
 
     public:
     struct input()
     {
     cout<<"Enter the name of student : ";
-    cin>>s1[i].name;
+    cin>>s1.name;
     cout<<"Enter the roll no of student : ";
-    cin>>s1[i].roll;
+    cin>>s1.roll;
     cout<<"Enter the address of student : ";
-    cin>>s1[i].address;
+    cin>>s1.address;
+    cout<<"Enter the percentage of student : ";
+    cin>>s1.percentage;
+    }
+
+    struct display()
+    {
+        cout<<
     }
 };
 

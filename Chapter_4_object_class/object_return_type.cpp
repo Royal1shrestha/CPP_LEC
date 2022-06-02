@@ -13,17 +13,17 @@ class student
     }
 };
 
-student displayData(student s1,student s2)
+student displayData()
 {
+    student s1;
     s1.marks=99.00;
     s2.marks=76.00;
-    return student;
-    
+    return s1;
 }
 
 int main()
 {
-    student s1(99.00),s2(78.00);
+    student s1,s2;
     displayData(s1,s2);
     return 0;
 }
