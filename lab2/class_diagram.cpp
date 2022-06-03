@@ -4,41 +4,19 @@ using namespace std;
 
 class student
 {
-    private:
+    public:
     struct std
     {
     string name;
     int roll;
     string address;
     float percentage;
-    }s1;
+    }s1[100];
 
     public:
-    struct input()
+    void input(int n)
     {
-    cout<<"Enter the name of student : ";
-    cin>>s1.name;
-    cout<<"Enter the roll no of student : ";
-    cin>>s1.roll;
-    cout<<"Enter the address of student : ";
-    cin>>s1.address;
-    cout<<"Enter the percentage of student : ";
-    cin>>s1.percentage;
-    }
-
-    struct display()
-    {
-        cout<<
-    }
-};
-
-int main()
-{
-    int n,i;
-    student s1[100];
-    cout<<"Enter the number of student in class : ";
-    cin>>n;
-
+        int i;
     // loop for 'n' no student
     for(i=0;i<n;i++)
     {
@@ -48,15 +26,39 @@ int main()
     cin>>s1[i].roll;
     cout<<"Enter the address of student : ";
     cin>>s1[i].address;
+    cout<<"Enter the percentage of student : ";
+    cin>>s1[i].percentage;
+    }
     }
 
-    cout<<"\n---DISPLAYING INFORMATION---\n";
-    cout<<"Name \t Roll no \t Address \n";
-    for(i=0;i<n;i++)
+    void display(int n)
     {
-        cout<<s1[i].name;
-        cout<<"\t "<<s1[i].roll;
-        cout<<"\t \t"<<s1[i].address ;
+        int j;
+        cout<<"\n---DISPLAYING INFORMATION---\n";
+        cout<<"Name \t Roll no \t Address \t Percentage \n";
+        for(j=0;j<n;j++)
+    {
+        if(s1[j].percentage >= 45)
+        {
+        cout<<s1[j].name;
+        cout<<"\t "<<s1[j].roll;
+        cout<<"\t \t \0.5t"<<s1[j].address;
+        cout<<"\t \t"<<s1[j].percentage<<"%";
         cout<<"\n";
+        }
     }
+    cout<<"Those whose name didn't appear better study properly.";
+    }
+};
+
+int main()
+{
+    int n,i;
+    cout<<"Enter the number of student in class : ";
+    cin>>n;
+    student s;
+    s.input(n);
+    s.display(n);
+    return 0;
+
 }
