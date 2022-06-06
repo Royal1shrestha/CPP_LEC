@@ -5,17 +5,18 @@ using namespace std;
 class student
 {
     public:
-    double marks;
+    double marks1,marks2;
 
-    student(double m)
+    student(double m1, double m2)
     {
-        marks=m;
+        marks1=m1;
+        marks2=m2;
     }
 };
 
 student displayData()
 {
-    student s1;
+    student s1,s2;
     s1.marks=99.00;
     s2.marks=76.00;
     return s1;
@@ -23,7 +24,8 @@ student displayData()
 
 int main()
 {
-    student s1,s2;
-    displayData(s1,s2);
+    student s;
+    s=displayData();
+
     return 0;
 }

@@ -6,13 +6,10 @@ using namespace std;
 
 struct area
 {
-    double a,b,c,s;
+    double s;
 
-    double calculateArea(double x,double y,double z)
+    double calculateArea(double a,double b,double c)
 {
-    a=x;
-    b=y;
-    c=z;
     s=(a+b+c)/2;
     cout<<"The area of triangle is "<<sqrt(s*(s-a)*(s-b)*(s-c));
 }
