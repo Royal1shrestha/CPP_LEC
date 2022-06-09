@@ -8,7 +8,7 @@ class mobile
     int m=10;
 
     public:
-    void display()
+    void display(int m)
     {
         cout<<"m="<<m<<endl;
         cout<<"this->m="<<this->m<<endl;
@@ -19,7 +19,7 @@ class mobile
 int main()
 {
     mobile m1,m2;
-    m1.display();
-    m2.display();
+    m1.display(30);
+    m2.display(20);
     return 0;
 }
