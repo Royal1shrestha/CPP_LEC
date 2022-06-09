@@ -1,31 +1,27 @@
-// WAP to return object.
+//using object as a return type
+
 #include<iostream>
 using namespace std;
 
-class student
-{
+class Student{
     public:
     double marks1,marks2;
-
-    student(double m1, double m2)
-    {
-        marks1=m1;
-        marks2=m2;
-    }
 };
 
-student displayData()
-{
-    student s1,s2;
-    s1.marks=99.00;
-    s2.marks=76.00;
-    return s1;
+Student createStudent(){
+    Student student;
+    student.marks1 = 100;
+    student.marks2 = 90;
+    cout<<"student.marks1 = "<<student.marks1<<endl;
+    cout<<"student.marks2 = "<<student.marks2<<endl;
+    return student;
 }
 
-int main()
-{
-    student s;
-    s=displayData();
+int main(){
+    Student student1;
+    student1 = createStudent();
+    cout<<"student.marks1 = "<<student1.marks1<<endl;
+    cout<<"student.marks2 = "<<student1.marks2<<endl;
 
-    return 0;
+    return  0;
 }
