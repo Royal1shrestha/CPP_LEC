@@ -3,14 +3,14 @@ using namespace std;
 
 class base
 {
-    public:
+    protected:
     void print()
     {
         cout<<"Base function"<<endl;
     }
 };
 
-class derived
+class derived : public base
 {
     public:
     void print()
