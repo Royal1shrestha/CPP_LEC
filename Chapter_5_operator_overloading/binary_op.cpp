@@ -20,7 +20,7 @@ class binary
         b=y;
     }
 
-    binary operator +(binary bin)
+    binary operator +(binary &bin)
     {
         binary b1;
         cout<<"Value of bin inside overloading function is "<<bin.a<<endl;

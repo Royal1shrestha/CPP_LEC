@@ -37,9 +37,10 @@ int main()
     // print area of wall
     cout<<"Area of wall 1:"<<wall1.calculateArea()<<endl;
     // copy content of walll to another object wall2
-    wall wall2 = wall1;
+     wall wall2 = wall1;
     // print area of wall2
-    cout<<"Area of wall 2 :"<<wall2.calculateArea()<<endl;
-
+     cout<<"Area of wall 2 :"<<wall2.calculateArea()<<endl;
+     wall wall3(wall1);
+     cout<<"Area of wall 3 :"<<wall3.calculateArea()<<endl;
     return 0;
 }

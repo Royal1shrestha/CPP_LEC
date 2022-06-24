@@ -15,7 +15,7 @@ class student
         {
             name=x;
             section=a;
-            age=b;        
+            age=b;       
         }
 
         string display_name()
