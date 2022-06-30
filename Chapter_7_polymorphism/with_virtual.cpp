@@ -13,7 +13,7 @@ class Shape
         length=b;
     }
 
-    void virtual Area()
+    void Area()
     {
         cout<<"The area of shape ..... "<<endl;
     }
@@ -67,6 +67,3 @@ int main()
 
     return 0;
 }
-
-/* When a function is made virtual,it allows a program to decide a run time which function to call based on
-the "TYPE OF THE OBJECT POINTED BY THE POINTER" rather than "TYPE OF THE POINTER ITSELF".*/
