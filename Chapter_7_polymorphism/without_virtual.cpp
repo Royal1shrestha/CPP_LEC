@@ -13,7 +13,7 @@ class Shape
         length=b;
     }
 
-    void virtual Area()
+    void  Area()
     {
         cout<<"The area of shape ..... "<<endl;
     }
