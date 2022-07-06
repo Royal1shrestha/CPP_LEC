@@ -99,7 +99,7 @@ int main()
     m.display();
     cout<<"Press 1 to update the data or 0 to exit";
     cin>>x;
-    if(x=1)
+    if(x==1)
     {
     m.updateData();
     m.showData();
@@ -108,5 +108,6 @@ int main()
     {
         exit;
     }
+    system("pause");
     return 0;
 }

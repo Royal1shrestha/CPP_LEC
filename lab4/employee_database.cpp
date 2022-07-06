@@ -3,6 +3,7 @@ using namespace std;
 
 class staff
 {
+    protected:
     int code;
     string name;
 
@@ -24,6 +25,7 @@ class staff
 
 class teacher : public staff
 {
+    protected:
     string subject;
     string publication;
 
@@ -47,6 +49,7 @@ class teacher : public staff
 
 class officer : public staff
 {
+    protected:
     int grade;
 
     public:
@@ -66,6 +69,7 @@ class officer : public staff
 
 class typist : public staff
 {
+    protected:
     int speed;
 
     public:
@@ -99,6 +103,7 @@ class regular : public typist
 
 class casual : public typist
 {
+    protected:
     int daily,wages;
     public:
     void getData()
@@ -120,6 +125,7 @@ class casual : public typist
 
 int main()
 {
+    char z,x;
     teacher t;
     officer o;
     regular r;
@@ -134,12 +140,31 @@ int main()
     cout<<"Enter data on casual : "<<endl;
     c.getData();
 
+    cout<<"Enter to show data for teacher(t),officer(o) & typist(p) : ";
+    cin>>z;
+    if(z=='t')
+    {
     cout<<"Data on teacher : "<<endl ;
     t.display();
+    }
+    if(z=='o')
+    {
     cout<<"Data on officer : " <<endl;
     o.display();
+    }
+    if(z=='p')
+    {
+    cout<<"Enter r for regular and c for casual : ";
+    cin>>x;
+    if(x=='r')
+    {
     cout<<"Data on regular : " <<endl;
     r.display();
+    }
+    if(x=='c')
+    {
     cout<<"Data on casual : " <<endl;
     c.display();
+    }
+    }
 }
