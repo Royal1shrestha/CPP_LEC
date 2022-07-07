@@ -1,6 +1,5 @@
 // Q. WAP to calculate the area of triangle
     #include<iostream>
-
     using namespace std;
 
     int main()
