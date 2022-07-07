@@ -1,67 +1,67 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class person
 {
-    protected:
+protected:
     char name[100];
     int code;
 
-    public:
+public:
     person()
     {
-        cout<<"Enter the name of the class person . ";
-        cin>>name;
-        cout<<"Enter the code of the class person . ";
-        cin>>code;
+        cout << "Enter the name of the class person . ";
+        cin >> name;
+        cout << "Enter the code of the class person . ";
+        cin >> code;
     }
 
     void display()
     {
-        cout<<"Name : "<<name<<endl;
-        cout<<"Code : "<<code<<endl;
+        cout << "Name : " << name << endl;
+        cout << "Code : " << code << endl;
     }
 };
 
 class account : virtual public person
 {
-    protected:
+protected:
     int pay;
 
-    public:
+public:
     account()
     {
-        cout<<"Enter the pay of the class person .";
-        cin>>pay;
+        cout << "Enter the pay of the class person .";
+        cin >> pay;
     }
 
     void display()
     {
-        cout<<"Pay : "<<pay<<endl;
+        cout << "Pay : " << pay << endl;
     }
 };
 
 class admin : virtual public person
 {
-    protected:
+protected:
     int exp;
 
-    public:
+public:
     admin()
     {
-        cout<<"Enter the experience of the class person .";
-        cin>>exp;
+        cout << "Enter the experience of the class person .";
+        cin >> exp;
     }
 
     void display()
     {
-        cout<<"Experience : "<<exp<<endl;
+        cout << "Experience : " << exp << endl;
     }
 };
 
-class master : public account,public admin
+class master : public account, public admin
 {
-    public:
+public:
     void display()
     {
         person::display();
@@ -71,38 +71,38 @@ class master : public account,public admin
 
     void updateData()
     {
-        cout<<"Enter the updated name : ";
-        cin>>name;
-        cout<<"Enter the updated code : "; 
-        cin>>code;
-        cout<<"Enter the updated experience : ";
-        cin>>exp;
-        cout<<"Enter the updated pay : ";
-        cin>>pay;
+        cout << "Enter the updated name : ";
+        cin >> name;
+        cout << "Enter the updated code : ";
+        cin >> code;
+        cout << "Enter the updated experience : ";
+        cin >> exp;
+        cout << "Enter the updated pay : ";
+        cin >> pay;
     }
 
     void showData()
     {
-        cout<<"Name : "<<name<<endl;
-        cout<<"Code : "<<code<<endl;
-        cout<<"Experience : "<<exp<<endl;
-        cout<<"Pay : "<<pay<<endl;
+        cout << "Name : " << name << endl;
+        cout << "Code : " << code << endl;
+        cout << "Experience : " << exp << endl;
+        cout << "Pay : " << pay << endl;
     }
 };
 
 int main()
 {
     int x;
-    cout<<"Entering data for class person ....."<<endl;
+    cout << "Entering data for class person ....." << endl;
     master m;
-    cout<<"Displaying data of class person ........"<<endl;
+    cout << "Displaying data of class person ........" << endl;
     m.display();
-    cout<<"Press 1 to update the data or 0 to exit";
-    cin>>x;
-    if(x==1)
+    cout << "Press 1 to update the data or 0 to exit";
+    cin >> x;
+    if (x == 1)
     {
-    m.updateData();
-    m.showData();
+        m.updateData();
+        m.showData();
     }
     else
     {
