@@ -1,7 +1,7 @@
 // Q. WAP in C++ to read the record the student's name,address,roll no and display them using structure.
 #include<iostream>
-
 using namespace std;
+
 struct student
     {
         char name[50],address[50];
