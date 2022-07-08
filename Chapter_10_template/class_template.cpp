@@ -47,5 +47,7 @@ int main()
     calculator<float>floatcalc(2.4,1.7);
     cout<<"Int results : "<<endl;
     intcalc.displayResult();
+    cout<<"Float results : "<<endl;
+    floatcalc.displayResult();
     return 0;
 }
