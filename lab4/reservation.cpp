@@ -49,5 +49,5 @@ int main()
 {
     reservation r;
     r.display();
-    cout << "...........Thank U for your purchase........";
+    cout << "...........Thank U for your purchase.........";
 }
