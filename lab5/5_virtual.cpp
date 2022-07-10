@@ -57,7 +57,6 @@ int main()
     Rectangle r(10, 20);
 
     t.display_area();
-
     r.display_area();
 
     return 0;
