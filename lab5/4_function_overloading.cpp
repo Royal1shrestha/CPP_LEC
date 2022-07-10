@@ -28,4 +28,5 @@ int main()
     a.calculateArea(1.1, 2.2, 2.2);
     a.calculateArea(5.5, 6.6);
     a.calculateArea(9.9);
+    return 0;
 }
