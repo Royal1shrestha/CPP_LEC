@@ -7,7 +7,6 @@ class Vector
     float x,y,z;
 
     public:
-    friend Vector operator +(Vector x,Vector y);
     void getData()
     {
         cout<<"Enter x component : ";
@@ -17,20 +16,21 @@ class Vector
         cout<<"Enter z component : ";
         cin>>z;
     }
+
+    Vector operator +(Vector v)
+{
+    Vector sum;
+    sum.x=x+v.x;
+    sum.y=y+v.y;
+    sum.z=z+v.z;
+    return sum;
+}
+
     void display()
     {
         cout<<x<<"i + "<<y<<"j + "<<z<<"k"<<endl;
     }
 };
-
-Vector operator +(Vector v1,Vector v2)
-{
-    Vector sum;
-    sum.x=v1.x+v2.x;
-    sum.y=v1.y+v2.y;
-    sum.z=v1.z+v2.z;
-    return sum;
-}
 
 int main()
 {
