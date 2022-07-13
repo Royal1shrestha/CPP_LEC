@@ -96,7 +96,7 @@ int main()
     result r;
     cout << "Enter the data for the student......... " << endl;
     r.getData();
-    cout << "Data of the student.......... " << endl;
+    cout << "Data of the student........... " << endl;
     r.display();
     return 0;
 }
