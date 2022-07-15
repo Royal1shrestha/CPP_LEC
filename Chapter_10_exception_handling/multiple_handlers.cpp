@@ -1,38 +1,42 @@
-#include<iostream>
+#include <iostream>
 #define MAX 2
 using namespace std;
 
 class Stack
 {
-    protected:
+protected:
     int s[MAX];
     int top;
 
-    public:
-    class FULL{};//exception class for full stack with empty class body
-    class EMPTY{};
+public:
+    class FULL
+    {
+    }; // exception class for full stack with empty class body
+    class EMPTY
+    {
+    };
 
     Stack()
     {
-        top=-1;
+        top = -1;
     }
 
     void push(int x)
     {
-        if(top == MAX-1)
+        if (top == MAX - 1)
         {
             throw FULL();
         }
 
         else
         {
-            s[++top]=x;
+            s[++top] = x;
         }
     }
 
     int pop()
     {
-        if(top == -1)
+        if (top == -1)
         {
             throw EMPTY();
         }
@@ -51,21 +55,21 @@ int main()
     {
         s.push(11);
         s.push(22);
-        // s.push(33);
+        s.push(33); // if only two push then,the stack becomes empty.
 
-        cout<<"Number popped : "<<s.pop()<<endl;
-        cout<<"Number popped : "<<s.pop()<<endl;
-        cout<<"Number popped : "<<s.pop()<<endl;
+        cout << "Number popped : " << s.pop() << endl;
+        cout << "Number popped : " << s.pop() << endl;
+        cout << "Number popped : " << s.pop() << endl;
     }
 
-    catch(Stack::FULL)
+    catch (Stack::FULL)
     {
-        cout<<"Exception.Stack is full."<<endl;
+        cout << "Exception.Stack is full." << endl;
     }
 
-    catch(Stack::EMPTY)
+    catch (Stack::EMPTY)
     {
-        cout<<"Exception.Stack is empty."<<endl;
+        cout << "Exception.Stack is empty." << endl;
     }
 
     return 0;
