@@ -1,8 +1,7 @@
 #include<iostream>
-#include<math.h>
+#include<cmath>
 using namespace std;
 
-class rect;
 class polar
 {
     public:
@@ -15,18 +14,12 @@ class polar
         cout<<"Enter value of angle in degree : ";
         cin>>angle;
     }
-
-    void display()
-    {
-        cout<<"Radius : "<<radius<<endl;
-        cout<<"Angle : "<<angle<<endl;
-    }
 };
 
 class rect
 {
     public:
-    int x,y;
+    float x,y;
 
     rect()
     {
@@ -34,15 +27,7 @@ class rect
         y=0;
     }
 
-    void getData()
-    {
-        cout<<"Enter value of x : ";
-        cin>>x;
-        cout<<"Enter value of y : ";
-        cin>>y;
-    }
-
-    void conversion(polar p)
+    rect(polar p)
     {
         p.getData();
         x=p.radius*cos(p.angle*3.14/180);
@@ -60,6 +45,6 @@ int main()
 {
     polar p;
     rect r;
-    r.conversion(p);
+    r=p;
     r.display();
 }

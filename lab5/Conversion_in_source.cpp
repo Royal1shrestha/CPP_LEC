@@ -27,19 +27,14 @@ class polar
     public:
     float radius;
     float angle;
-
-    void getData()
+    
+    operator rect()
     {
-        cout<<"Enter value of radius : ";
-        cin>>radius;
-        cout<<"Enter value of angle in degree : ";
-        cin>>angle;
-    }
-    void conversion(rect r)
-    {
+        rect r;
         r.getData();
         radius=sqrt(r.x*r.x+r.y*r.y);
         angle=atan(r.y/r.x);
+        return rect(r);
     }
     void display()
     {
@@ -52,6 +47,6 @@ int main()
 {
     polar p;
     rect r;
-    p.conversion(r);
+    r=p;
     p.display();
 }
