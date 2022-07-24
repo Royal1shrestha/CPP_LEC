@@ -2,42 +2,41 @@
 #include<cmath>
 using namespace std;
 
-class polar
-{
-    public:
-    int radius,angle;
-
-    void getData()
-    {
-        cout<<"Enter value of radius : ";
-        cin>>radius;
-        cout<<"Enter value of angle in degree : ";
-        cin>>angle;
-    }
-};
-
 class rect
 {
     public:
-    float x,y;
+    float x=0,y=0;
 
     rect()
     {
-        x=0;
-        y=0;
+        cout<<"Enter value of x : ";
+        cin>>x;
+        cout<<"Enter value of y : ";
+        cin>>y;
+    }
+};
+
+class polar
+{
+    public:
+    float radius,angle;
+
+    polar()
+    {
+        radius=0;
+        angle=0;
     }
 
-    rect(polar p)
+    polar(rect r)
     {
-        p.getData();
-        x=p.radius*cos(p.angle*3.14/180);
-        y=p.radius*sin(p.angle*3.14/180);
+        radius=sqrt(r.x*r.x+r.y*r.y);
+        angle=atan(r.y/r.x);
     }
 
     void display()
     {
-        cout<<"x : "<<x<<endl; 
-        cout<<"y : "<<y; 
+        cout<<"Radius : "<<radius<<endl;
+        cout<<"Angle : "<<angle*180/3.14<<endl;
     }
 };
 
@@ -45,6 +44,6 @@ int main()
 {
     polar p;
     rect r;
-    r=p;
-    r.display();
+    p=r;
+    p.display();
 }

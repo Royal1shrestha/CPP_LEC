@@ -2,6 +2,25 @@
 #include<math.h>
 using namespace std;
 
+class polar
+{
+    public:
+    float radius;
+    float angle;
+
+    polar(){}
+    polar(float a,float b)
+    {
+        radius=a;
+        angle=b;
+    }
+    void display()
+    {
+        cout<<"Radius : "<<radius<<endl;
+        cout<<"Angle : "<<angle*180/3.14<<endl;
+    }
+};
+
 class rect
 {
     public:
@@ -20,26 +39,13 @@ class rect
         cout<<"Enter value of y : ";
         cin>>y;
     }
-};
 
-class polar
-{
-    public:
-    float radius;
-    float angle;
-    
-    operator rect()
+    operator polar()
     {
-        rect r;
-        r.getData();
-        radius=sqrt(r.x*r.x+r.y*r.y);
-        angle=atan(r.y/r.x);
-        return rect(r);
-    }
-    void display()
-    {
-        cout<<"Radius : "<<radius<<endl;
-        cout<<"Angle : "<<angle*180/3.14<<endl;
+        float radius,angle;
+        radius=sqrt(x*x+y*y);
+        angle=atan(y/x);
+        return polar(radius,angle);
     }
 };
 
@@ -47,6 +53,7 @@ int main()
 {
     polar p;
     rect r;
-    r=p;
+    r.getData();
+    p=r;
     p.display();
 }
