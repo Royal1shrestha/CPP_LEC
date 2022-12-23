@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            Form
+        </title>
+    </head>
+
+    <body>
+        <form>
+            <div>
+                <input type="text" placeholder="Full Name" name="name">
+                <input type="number" placeholder="Age" age="age">
+                <input type="password" placeholder="Password" password="password">
+            </div>
+            
+            <div>
+                Main Roles
+                <input name="role" type="radio" value="tank">Tank
+                <input name="role" type="radio" value="mage">Mage
+                <input name="role" type="radio" value="fighter">Fighter
+                <input name="role" type="radio" value="marksman">Marksman
+                <input name="role" type="radio" value="assasin">Assasin
+                <input name="role" type="radio" value="support">Support
+            </div>
+
+            <div>
+                Country
+                <input name="Countries" list="Country" placeholder="countries">
+                <datalist id="Country">
+                    <option value="Afghanisthan"></option>
+                    <option value="Bangladesh">
+                    <option value="Bhutan">
+                    <option value="India">
+                    <option value="Maldives">
+                    <option value="Nepal">
+                    <option value="Pakistan">
+                    <option value="Srilanka">
+                    </option>
+                </datalist>
+            </div>
+
+            <input type="submit">
+        </form>
+    </body>
+</html>
